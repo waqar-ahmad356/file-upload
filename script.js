@@ -7,11 +7,7 @@ document.getElementById('fileInput').addEventListener('change', uploadFiles);
 function uploadFiles(event) {
    
   const files = Array.from(event.target.files);
-
-
   uploadedFiles.push(...files)
-
-  
   renderFileList();
   document.getElementById('fileInput').value = '';
   console.log(uploadedFiles)
@@ -19,10 +15,7 @@ function uploadFiles(event) {
 
 
 function removeFile(index) {
-  
   uploadedFiles.splice(index, 1);
-
-
   renderFileList();
   console.log(uploadedFiles)
 }
